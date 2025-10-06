@@ -271,5 +271,57 @@ input[type="text"]:focus, select:focus {
     background: linear-gradient(45deg, #b71c1c, #d32f2f);
     box-shadow: 0 7px 20px rgba(211, 47, 47, 0.6);
     transform: translateY(-1px);
+    /* --- MEDIA QUERY UNTUK LAYAR HP (Maksimal Lebar 600px) --- */
+@media (max-width: 600px) {
+    
+    /* 1. Kontainer Utama: Kurangi Padding */
+    .container {
+        padding: 15px; /* Lebih kecil agar konten tidak terlalu jauh dari tepi */
+        margin: 10px auto;
+        border-radius: 10px; /* Kurangi kelengkungan agar lebih sesuai dengan HP */
+    }
+    
+    /* 2. Judul dan Teks: Kurangi Ukuran */
+    h1 {
+        font-size: 1.8em; /* H1 jadi sedikit lebih kecil */
+    }
+
+    /* 3. Kartu Saldo: Teks Saldo Lebih Kecil */
+    .saldo-display {
+        font-size: 2.2em; /* Saldo utama sedikit lebih kecil */
+    }
+    
+    /* 4. Kontribusi Area: Pastikan Kontribusi Berjajar Rapi */
+    .kontribusi-area {
+        flex-direction: row; /* Tetap horizontal jika ada cukup ruang */
+        padding: 10px 0;
+    }
+    .amount-kontribusi {
+        font-size: 1.1em; /* Ukuran kontribusi individu lebih ringkas */
+    }
+
+    /* 5. Form dan Input: Lebih Ringkas */
+    .transaksi-form {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    input[type="text"], select {
+        padding: 10px; /* Input sedikit lebih pendek */
+        margin: 5px 0 10px 0;
+        font-size: 1em;
+    }
+    
+    /* 6. Tombol: Lebih Ringkas */
+    .btn {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    /* 7. Riwayat: Lebih Rapat */
+    #riwayat-list li {
+        padding: 8px 0;
+        font-size: 0.85em;
+    }
+}
 }
 }
